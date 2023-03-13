@@ -1,0 +1,286 @@
+body {
+    font-family: sans-serif;
+    font-size: 16px;
+    color: #333;
+    background-color: #fff;
+    transition: background-color 0.5s ease;
+  }
+  
+  header {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  nav li {
+    margin-right: 1rem;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #333;
+    padding: 0.5rem;
+    border-radius: 3px;
+    position: relative; /* add this line to make the extending line relative to the link */
+  }
+  
+  nav a:hover {
+    background-color: #eee;
+  }
+  
+  nav a:hover::before { /* add this block to add the extending line effect */
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: red;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-out;
+    transform-origin: left;
+  }
+  
+  nav a:hover::before {
+    transform: scaleX(1);
+  }
+  
+  
+  nav a {
+    text-decoration: none;
+    color: #333;
+    padding: 0.5rem;
+    border-radius: 3px;
+  }
+  
+  nav a:hover {
+    background-color: #eee;
+  }
+  
+  main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  section {
+    margin-bottom: 2rem;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 0.5rem;
+  }
+  
+  button.mode-toggle {
+    background-color: #fff;
+    border: 2px solid #333;
+    padding: 0.5rem;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.5}
+  
+  body.dark-mode {
+    color: #eee;
+    background-color: #333;
+  }
+  
+  header.dark-mode {
+    background-color: #333;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+  }
+  
+  nav.dark-mode a {
+    color: #eee;
+  }
+  
+  nav.dark-mode a:hover {
+    background-color: #444;
+  }
+  
+  button.mode-toggle.dark-mode {
+    background-color: #333;
+    border-color: #eee;
+    color: #eee;
+  }
+  
+  main.dark-mode {
+    background-color: #444;
+  }
+  
+  section.dark-mode {
+    border: 2px solid #eee;
+  }
+  
+  h1.dark-mode {
+    color: #eee;
+  }
+  
+  ul.dark-mode {
+    border-left: 2px solid #eee;
+  }
+  
+  li.dark-mode {
+    border-bottom: 1px solid #eee;
+  }
+  
+  .box-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .box {
+    width: 250px;
+    height: 220px;
+    background-color: #ccc;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .box:hover {
+    transform: scale(1.05);
+    background-color: #999;
+  }
+  
+  .tic-tac-toe-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    padding: 50px;
+    background-color: #ccc;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .tic-tac-toe-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .tic-tac-toe-symbol {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .tic-tac-toe-x {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 5px;
+    background-color: black;
+    border-radius: 5px;
+    transform-origin: center;
+  }
+  
+  .tic-tac-toe-x::before,
+  .tic-tac-toe-x::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background-color: black;
+    border-radius: 5px;
+    transform-origin: center;
+  }
+  
+  .tic-tac-toe-x::before {
+    transform: rotate(45deg);
+  }
+  
+  .tic-tac-toe-x::after {
+    transform: rotate(-45deg);
+  }
+  
+  .tic-tac-toe-title {
+    margin: 0;
+    font-size: 24px;
+    text-align: center;
+  }
+  
+  .tic-tac-toe-play-button {
+    margin-top: 10px;
+    font-size: 18px;
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .tic-tac-toe-play-button:hover {
+    background-color: #eee;
+  }
+  
+  
+  .wordle-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px;
+    background-color: #fcc;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .wordle-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .wordle-title {
+    margin: 0;
+    font-size: 24px;
+    text-align: center;
+  }
+  
+  .wordle-play-button {
+    margin-top: 10px;
+    font-size: 18px;
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .wordle-play-button:hover {
+    background-color: #eee;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
